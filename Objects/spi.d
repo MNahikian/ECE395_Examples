@@ -1,5 +1,5 @@
 .\objects\spi.o: SPI.c
-.\objects\spi.o: spi.h
+.\objects\spi.o: SPI.h
 .\objects\spi.o: C:\Keil_v5\ARM\Inc\NXP\LPC11xx\LPC11xx.h
 .\objects\spi.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm0.h
 .\objects\spi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h

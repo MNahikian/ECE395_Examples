@@ -72,16 +72,20 @@ Source Files:
 	I2C.c
 		- Defines I2C status register values for the I2CSTAT register
 		  as described by Tables 235 - 240 in the LPC111X User Manual.
-		- Contains function definitions for I2CInit, I2CSend, and
-		  I2CRead.
-		- Defines the waitForStatusI2C helper function used in I2CSend
-		  and I2CRead.
+		- Contains function definitions for I2C_Init, I2C_Send, and
+		  I2C_Read.
+		- Defines the waitForStatusI2C helper function used in I2C_Send
+		  and I2C_Read.
 
 	SPI.h
-		-
+		- Declares the SPI_Init, SPI_Send, and SPI_Read functions.
 
 	SPI.c
-		-
+		- Defines the SPI_Init function used to initialize the registers
+		  for SPI communication.
+		- Contains function definitions for SPI_Send and SPI_Read.
+		- Defines the waitForStatusSPI helper function used in SPI_Send
+		  and SPI_Read.
 
 	UART.h
 		- Declares the UARTInit, sendchar, and getkey functions.
@@ -118,3 +122,5 @@ Usage :
 
 	Note that the Retarget.c file must be compiled in your project for
 	UART communication to work correctly.
+
+	The UART communication is using the 115200 baud rate but can be changed.

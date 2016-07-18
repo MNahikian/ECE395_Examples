@@ -19,7 +19,7 @@
 /*----------------------------------------------------------------------------
   Initialize UART pins, Baudrate 115200
  *----------------------------------------------------------------------------*/
-void UARTInit (void) {
+void UART_Init (void) {
    
   LPC_SYSCON->SYSAHBCLKCTRL |= (1UL <<  6);  //enable clocks to GPIO block (sec 3.5.14)
   LPC_SYSCON->SYSAHBCLKCTRL |= (1UL << 16);  //enable clocks to IOCON block (sec 3.5.14)

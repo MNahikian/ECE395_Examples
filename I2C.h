@@ -27,8 +27,8 @@
 #define I2SCLH_SCLH			0x00000031  /* I2C SCL Duty Cycle High Reg */
 #define I2SCLL_SCLL			0x00000031  /* I2C SCL Duty Cycle Low Reg */
 
-void I2CInit(uint32_t I2cMode);
-void I2CSend(uint8_t address, uint32_t bytes, uint8_t* dataBuff);
-void I2CRead(uint8_t address, uint32_t bytes, uint8_t* dataBuff);
+void I2C_Init(uint32_t I2cMode);
+void I2C_Send(uint8_t address, uint32_t bytes, uint8_t* dataBuff);
+void I2C_Read(uint8_t address, uint32_t bytes, uint8_t* dataBuff);
 
 #endif // I2C

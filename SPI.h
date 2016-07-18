@@ -3,9 +3,8 @@
 
 #include "LPC11xx.h"
 
-#define TNF 0x1
-
-void SPI_init(void);
-void SPI_send(uint16_t);
+void SPI_Init(void);
+void SPI_Send(uint16_t);
+uint16_t SPI_Read(void);
 
 #endif

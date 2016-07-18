@@ -47,7 +47,7 @@ void waitForStatusI2C(uint32_t status){
 * Documentation: (sec 15.8)
 *
 */
-void I2CRead(uint8_t address, uint32_t bytes, uint8_t* dataBuff){
+void I2C_Read(uint8_t address, uint32_t bytes, uint8_t* dataBuff){
 		int i;
 	
 		//Clear the Interrupt and Start Registers, then send a Start Command
@@ -96,7 +96,7 @@ void I2CRead(uint8_t address, uint32_t bytes, uint8_t* dataBuff){
 * Documentation: (sec 15.8)
 *
 */
-void I2CSend(uint8_t address, uint32_t bytes, uint8_t* dataBuff){
+void I2C_Send(uint8_t address, uint32_t bytes, uint8_t* dataBuff){
 
 		int i;
 		
@@ -127,7 +127,7 @@ void I2CSend(uint8_t address, uint32_t bytes, uint8_t* dataBuff){
 }
 
 /*
-* I2CInit
+* I2C_init
 *
 * Purpose : Initialize I2C controller
 *
@@ -135,7 +135,7 @@ void I2CSend(uint8_t address, uint32_t bytes, uint8_t* dataBuff){
 *      I2cMode : Either MASTER or SLAVE
 *
 */
-void I2CInit(uint32_t I2cMode){
+void I2C_Init(uint32_t I2cMode){
 
   LPC_SYSCON->SYSAHBCLKCTRL |= (1UL << 5);  //enable I2C clock (sec 3.5.14)
   LPC_SYSCON->SYSAHBCLKCTRL |= (1UL << 16); //enable IOCON clock (sec 3.5.14)
