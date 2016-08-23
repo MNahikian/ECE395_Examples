@@ -78,7 +78,7 @@ uint8_t getAnalogData(uint8_t channelNum){
 
 
 int main(){
-	pwm_32bit_timer_init(50, 0.5);    //Initialize a 50Hz PWM signal with 50% duty cycle
+	//pwm_32bit_timer_init(50, 0.5);    //Initialize a 50Hz PWM signal with 50% duty cycle
 	UART_Init();                      //Initialize UART serial communication
 	I2C_Init(I2CMASTER);              //Initialize I2C communication
 	SPI_Init();												//Initialize SPI communication
@@ -89,6 +89,7 @@ int main(){
 	while(1){
 		//Use SPI functions to read an analog signal from channel 7
 		printf("Analog Data: %x\n\r", (0x7F & getAnalogData(0x07)));
+		getCoeff();
 	}
 	
 	return 0;
